@@ -1,1 +1,1 @@
-echo "Hello, Oumouma!"
+echo "Hello, oumouma!"
