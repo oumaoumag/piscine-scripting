@@ -1,7 +1,8 @@
 #!/bin/bash
+FILE="file-researcher/facts.txt"
 
 # Find the line that starts with "It takes 12 honey."
-grep '^It takes 12 honey' file-researcher/facts.txt | sed 's/^[0-9]*://'
+grep '^It takes 12 honey' "$FILE"
 
 # Find all lines that contain the word "year"
-grep year file-researcher/facts.txt
+grep 'year' "$FILE"
