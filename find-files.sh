@@ -7,11 +7,9 @@ EXTRACT_DIR="extracted_data"
 
 curl -sL -O "$ZIP_URL"
 
-echo "Extracting.."
 mkdir -p "$EXTRACT_DIR"
 unzip -q "$ZIP_FILE" -d "$EXTRACT_DIR"
 
-echo "Directories found:"
 find "$EXTRACT_DIR" -type d
 
 # 4. Clean up the downloaded zip file
