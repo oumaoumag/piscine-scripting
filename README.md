@@ -1,0 +1,1 @@
+https://medium.com/@samidsyed1720/linux-commands-chmod-sort-curl-head-and-tail-e9ac29ddd6f2
