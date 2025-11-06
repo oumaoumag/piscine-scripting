@@ -1,5 +1,5 @@
 #!/bin/bash
-# hard-perm.sh – Set specific permissions for each file and directory
+# hard-perm.sh – Corrected version for Level 5
 
 cd hard-perm || { echo "Folder not found"; exit 1; }
 
