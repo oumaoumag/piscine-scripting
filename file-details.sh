@@ -1,7 +1,8 @@
 #!/bin/bash
+DIR="${1:-.}"
 
-# Navigate to the folder relative to this script
-cd "$(dirname "$0")/hard-perm" || { echo "hard-perm directory not found"; exit 1; }
+[[ -d "$DIR" ]] || { echo "Error: '$DIR' not found" >&2; exit 1; }
 
-# List details: permissions, date, time, filename
-ls -l --time-style=+%F\ %R | sed '1d' | awk '{print $1, $6, $7, $8}'
+ls -l --time-style=+%F\ %H:%M "$DIR" 2>/dev/null |
+  tail -n +2 |
+  awk '{printf "%s %s %s %s\n", $1, $6, $7, $9}'
