@@ -1,10 +1,13 @@
 #!/bin/bash
 
-cd hard-perm || { echo "Folder not found"; exit 1; }
-
-chmod 501 0 A
-chmod 777 3
-
-chmod 602 1 9
-chmod 640 2 5 6 8
-chmod 510 4 7
+chmod 401 hard-perm/0
+chmod 402 hard-perm/1
+chmod 604 hard-perm/2
+chmod 777 hard-perm/3
+chmod 511 hard-perm/4
+chmod 460 hard-perm/5
+chmod 460 hard-perm/6
+chmod 511 hard-perm/7
+chmod 604 hard-perm/8
+chmod 402 hard-perm/9
+chmod 401 hard-perm/A
