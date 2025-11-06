@@ -1,14 +1,13 @@
 #!/bin/bash
-# hard-perm.sh – Level 5 perfection
+# hard-perm.sh – Set specific permissions for each file and directory
 
 cd hard-perm || { echo "Folder not found"; exit 1; }
 
-# Directories: 0, 3, A
-chmod 101 0 A          # d--------x
-chmod 775 3            # drwxrwxrwx
+# Directories
+chmod 501 0 A
+chmod 777 3
 
 # Files
-chmod 201 1 9          # -r------w-
-chmod 604 2 8          # -rw----r--
-chmod 550 4 7          # -r-x--x---
-chmod 660 5 6          # -r--rw----
+chmod 604 1 9
+chmod 640 2 5 6 8
+chmod 550 4 7
