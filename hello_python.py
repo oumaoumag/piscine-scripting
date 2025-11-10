@@ -1,2 +1,2 @@
 def say_hello_python():
-    return "Hello, Python!"
+    return "Hello Python!"
