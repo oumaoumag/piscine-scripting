@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ls -l --time-style=+%F\ %R hard-perm | sed 1d | awk '{print $1, $6, $7, $9}'
+ls -l --time-style=+%F\ %R hard-perm | sed 1d | awk '{print $1,$6,$7,$8}'
