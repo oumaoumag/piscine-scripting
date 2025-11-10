@@ -5,23 +5,26 @@
 
 secret=$1
 tries=5
+moves=0
 
-for ((i=1; i<=5; i++)); do
+for ((i=0; i<5; )); do
     echo "Enter your guess ($tries tries left):"
     read guess
     
     [[ -z "$guess" ]] || [[ ! $guess =~ ^[0-9]+$ ]] || [[ $guess -lt 1 ]] || [[ $guess -gt 100 ]] && continue
     
+    ((moves++))
+    ((i++))
+    ((tries--))
+    
     if [[ $guess -eq $secret ]]; then
-        echo "Congratulations, you found the number in $i moves!"
+        echo "Congratulations, you found the number in $moves moves!"
         exit 0
     elif [[ $guess -gt $secret ]]; then
         echo "Go down"
     else
         echo "Go up"
     fi
-    
-    tries=$((tries - 1))
 done
 
 echo "You lost, the number was $secret"
