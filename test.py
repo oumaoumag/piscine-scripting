@@ -1,3 +1,9 @@
-from hello_python import say_hello_python
+from merge_two import merge_two
 
-print(say_hello_python())
+first = {
+    "Bob": 36,
+    "Louise": 23,
+    "Lea": 34
+}
+
+print(merge_two(first))
