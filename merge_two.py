@@ -4,28 +4,19 @@ def merge_two(first_dict):
     merged = first_dict.copy()
     
     while True:
-        try:
-            line = input()
-        except EOFError:
-            break
-            
-        line = line.strip()
-        if not line:
-            continue
-            
-        parts = line.split()
-        if len(parts) < 2:
-            continue
-            
-        key, val_str = parts[0], parts[1]
+        print("Add a new entry:\n")
+        key = input("key: ").strip()
         
         if key == "exit":
             break
-            
+        
+        value = input("value: ").strip()
         try:
-            value = int(val_str)
-            merged[key] = value
+            value = int(value)
+            
         except ValueError:
             continue
+        
+        merged[key] = value
     
     return json.dumps(merged)
